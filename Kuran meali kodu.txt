@@ -1,0 +1,35 @@
+html
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Türkçe Transkriptli Kur’an Meali</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 20px; }
+        .content { display: none; text-align: left; max-width: 800px; margin: 0 auto; }
+        input, button { margin: 10px; padding: 5px; }
+    </style>
+</head>
+<body>
+    <h1>Türkçe Transkriptli Kur’an Meali</h1>
+    <p>Parolayı giriniz: <input type="password" id="password"></p>
+    <button onclick="checkPassword()">Giriş</button>
+    <div id="content" class="content">
+        <h2>Fatiha Suresi</h2>
+        <p><b>Transkripsiyon:</b> Bismillahirrahmanirrahim</p>
+        <p><b>Meal:</b> Rahmân, Rahîm Allah nâmına.</p>
+    </div>
+    <script>
+        function checkPassword() {
+            var password = document.getElementById("password").value;
+            if (password === "La ilahe illa Allah") {
+                document.getElementById("content").style.display = "block";
+            } else {
+                alert("Yanlış parola!");
+            }
+        }
+    </script>
+</body>
+</html>
+
